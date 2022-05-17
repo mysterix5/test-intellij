@@ -1,6 +1,6 @@
 name: run java
 
-on: [push]
+on: push
 jobs:
   runmain:
     runs-on: java:18
