@@ -8,10 +8,23 @@ public class AppMain{
 		System.out.println("hallo welt");
 		System.out.println("print args array: " + Arrays.toString(args));
 
-		var nums = scan_numbers();
+		//var nums = scan_numbers();
+		var nums = new int[]{4,5};
 
 		execute_computation_exercises(nums[0], nums[1]);
+
+		test_and_print_string("sdöflkjasödlkfjasöldkfjaöslkfjaöslkdj");
+		test_and_print_string("sdffancydd");
+		test_and_print_string("asdf");
+		test_and_print_string("sdöflkjasödlkfjasöldkfancyjaöslkfjaöslkdj");
+
 	}
+
+	static void test_and_print_string(String s){
+		var test = StringExercise.test_string(s);
+		System.out.println("testing string: " + s + ": " + test);
+	}
+
 
 	static int[] scan_numbers(){
 
@@ -27,14 +40,15 @@ public class AppMain{
 	}
 	public static void execute_computation_exercises(int first_number, int second_number){
 
-		int sum = ComputeExercise.add(first_number, second_number);
+		int sum = IntExercise.add(first_number, second_number);
 		System.out.println(first_number + " + " + second_number + " is " + sum);
+		IntExercise.print_sum(sum);
 
 
-		if (ComputeExercise.equal(first_number, second_number)){
+		if (IntExercise.equal(first_number, second_number)){
 			System.out.println(first_number + " ist gleich " + second_number);
 		} else{
-			if(ComputeExercise.smaller(first_number, second_number)){
+			if(IntExercise.smaller(first_number, second_number)){
 				System.out.println(first_number + " ist kleiner als " + second_number);
 			} else {
 				System.out.println(first_number + " ist größer als " + second_number);
