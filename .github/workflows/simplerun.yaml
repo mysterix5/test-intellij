@@ -3,7 +3,7 @@ name: run java
 on: push
 jobs:
   runmain:
-    runs-on: java:18
+    runs-on: java
     steps:
       - run: cd src
       - run: javac -cp . test/*.java
